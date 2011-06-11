@@ -60,7 +60,7 @@ end
 
 # in your controller
 
-Notifier.some_kind_of_notification.deliver
+Notifier.some_kind_of_notification(user).deliver
 ```
 
 Also consider using [broadcast](https://github.com/futuresimple/broadcast)
