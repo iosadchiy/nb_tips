@@ -34,7 +34,7 @@ Send notifications using Twitter DMs
 * mailer and delivery method [app/mailers/notifier.rb](https://github.com/tepoga/nb_tips/blob/master/app/mailers/notifier.rb)
 * add msg template to app/views/notifier/some_kind_of_notification.haml
 
-```
+```ruby
 # app/mailers/notifier.rb
 
 class TwitterDelivery
