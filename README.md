@@ -5,7 +5,7 @@ NB Tips
 Guess file's mime type from extension
 -------------------------------------
 
-```
+```ruby
 # Gemfile
 gem 'mimetype-fu', :git => "git://github.com/jeanmartin/mimetype-fu.git", :require => 'mimetype_fu'
 
