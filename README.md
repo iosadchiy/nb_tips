@@ -22,7 +22,7 @@ Twitterie: Twitter API thin wrapper
 
 * uses oauth gem
 
-* [lib/twitterie.rb](lib/twitterie.rb)
+* [lib/twitterie.rb](https://github.com/tepoga/nb_tips/blob/master/lib/twitterie.rb)
 
 
 Send notifications using Twitter DMs
@@ -31,7 +31,7 @@ Send notifications using Twitter DMs
 * use Twitterie
 * use ActionMailer with custom delivery_method
 
-* mailer and delivery method [app/mailers/notifier.rb](app/mailers/notifier.rb)
+* mailer and delivery method [app/mailers/notifier.rb](https://github.com/tepoga/nb_tips/blob/master/app/mailers/notifier.rb)
 * add msg template to app/views/notifier/some_kind_of_notification.haml
 
 ```
