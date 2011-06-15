@@ -64,3 +64,11 @@ Notifier.some_kind_of_notification(user).deliver
 ```
 
 Also consider using [broadcast](https://github.com/futuresimple/broadcast)
+
+
+Ping TLDs
+---------
+
+```bash
+for host in uz tm pn io ac cm pw ai mn bi; do ping -qc5 $host; done
+```
