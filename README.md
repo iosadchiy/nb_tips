@@ -72,3 +72,14 @@ Ping TLDs
 ```bash
 for host in uz tm pn io ac cm pw ai mn bi; do ping -qc5 $host; done
 ```
+
+
+Bash: Find and replace in files
+-------------------------------
+
+(yeah, I want my own version of this)
+
+```
+find -type f | xargs sed -i 's/find this string/and replace to this/g'
+```
+
