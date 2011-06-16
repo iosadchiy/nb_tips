@@ -79,7 +79,7 @@ Bash: Find and replace in files
 
 (yeah, I want my own version of this)
 
-```
+```bash
 find -type f | xargs sed -i 's/find this string/and replace to this/g'
 ```
 
