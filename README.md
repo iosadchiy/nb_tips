@@ -83,3 +83,34 @@ Bash: Find and replace in files
 find -type f | xargs sed -i 's/find this string/and replace to this/g'
 ```
 
+
+Canvas: convert image to grayscale
+----------------------------------
+
+```javascript
+(function() {
+    var supportsCanvas = !!document.createElement('canvas').getContext;
+    supportsCanvas && (window.onload = greyImages);
+
+    function greyImages() {
+        var ctx = document.getElementsByTagName("canvas")[0].getContext('2d'),
+            img = document.getElementById("cvs-src"),
+            imageData, px, length, i = 0,
+            grey;
+
+        ctx.drawImage(img, 0, 0);
+
+        // Set 500,500 to the width and height of your image.
+        imageData = ctx.getImageData(0, 0, 500, 500);
+        px = imageData.data;
+        length = px.length;
+
+        for ( ; i < length; i+= 4 ) {
+            grey = px[i] * .3 + px[i+1] * .59 + px[i+2] * .11;
+            px[i] = px[i+1] = px[i+2] = grey;
+        }
+
+        ctx.putImageData(imageData, 0, 0);
+    }
+})();
+```
