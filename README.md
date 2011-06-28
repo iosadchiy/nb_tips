@@ -83,7 +83,6 @@ Bash: Find and replace in files
 find -type f | xargs sed -i 's/find this string/and replace to this/g'
 ```
 
-
 Canvas: convert image to grayscale
 ----------------------------------
 
@@ -114,3 +113,13 @@ Canvas: convert image to grayscale
     }
 })();
 ```
+
+Rake gotcha: environment changed without notice
+-----------------------------------------------
+
+```bash
+rake db:schema:load db:test:clone_structure db:seed_fu
+```
+
+Seeds will make their way to the test database as
+db:test:clone_structure task changes `Rails.env` to 'test'
