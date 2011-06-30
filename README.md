@@ -123,3 +123,23 @@ rake db:schema:load db:test:clone_structure db:seed_fu
 
 Seeds will make their way to the test database as
 db:test:clone_structure task changes `Rails.env` to 'test'
+
+
+Rspec matcher for accepts_nested_attributes_for
+-----------------------------------------------
+
+```ruby
+# in model
+  accepts_nested_attributes_for :images
+
+# in specs
+  it { should accept_nested_attributes_for :images }
+
+# spec/support/accept_nested_attributes_matcher.rb
+RSpec::Matchers.define :accept_nested_attributes_for do |association_name|
+  match do |object|
+    object.class.instance_methods.include? "#{association_name}_attributes="
+  end
+end
+
+```
