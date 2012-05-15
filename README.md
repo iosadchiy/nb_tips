@@ -143,3 +143,20 @@ RSpec::Matchers.define :accept_nested_attributes_for do |association_name|
 end
 
 ```
+
+
+Close Empathy chat windows with Esc
+-----------------------------------
+
+/usr/share/empathy/empathy-chat-window.ui
+
+`<accelerator key="W" modifiers="GDK_CONTROL_MASK"/>`
+change to
+`<accelerator key="Escape" />`
+
+
+## Ubuntu software center - remove ads ##
+
+/usr/share/software-center/softwarecenter/ui/gtk3/views/catview_gtk.py
+
+comment out `self._append_banner_ads()`
