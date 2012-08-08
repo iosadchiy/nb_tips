@@ -185,12 +185,14 @@ Customizations:
     `setxkbmap -option ctrl:nocaps,grp_led:caps`
     While you're here uncheck Blueman Applet to save precious 30mb out of our 1gb memory
 
+    Or even better: just edit /etc/default/keyboard
+
 2. Thunderbird:
     Account Settings -> Synchronization & Storage -> Advanced -> uncheck some folders, sync only recent 30 days
                         Local Folders -> Disk space -> remove messages older than 30 days
 
 3. Firefox:
-    Install LastPass
+    Install LastPass, XMarks
 
 4. Hibernate:
     As suspend [is not going to work until 3.5 kernel](https://bugs.launchpad.net/ubuntu/+source/hibernate/+bug/992229/comments/2) (12.10 release) use hibernation instead
