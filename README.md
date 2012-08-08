@@ -160,3 +160,39 @@ change to
 /usr/share/software-center/softwarecenter/ui/gtk3/views/catview_gtk.py
 
 comment out `self._append_banner_ads()`
+
+
+Customize Xubuntu fresh installation
+------------------------------------
+
+How to understand that Linux is evil?
+
+1. Use Ubuntu
+2. Try other Linux dists
+3. Buy a Mac
+
+Seems like I'm at stage 2. now.
+
+Anyway let's try to make it work for us. Keep in mind: 
+
+* introduce as little customizations as possible
+* do try to understand the way this dist is supposed to be used
+
+Customizations:
+
+1. Keyboard: use Capslock as additional Control, use Capslock LED as layout indicator:
+    Settings Manager -> Session and Startup -> add new item
+    `setxkbmap -option ctrl:nocaps,grp_led:caps`
+    While you're here uncheck Blueman Applet to save precious 30mb out of our 1gb memory
+
+2. Thunderbird:
+    Account Settings -> Synchronization & Storage -> Advanced -> uncheck some folders, sync only recent 30 days
+                        Local Folders -> Disk space -> remove messages older than 30 days
+
+3. Firefox:
+    Install LastPass
+
+4. Hibernate:
+    As suspend [is not going to work until 3.5 kernel](https://bugs.launchpad.net/ubuntu/+source/hibernate/+bug/992229/comments/2) (12.10 release) use hibernation instead
+    Enable hibernation: [http://askubuntu.com/questions/94754/how-to-enable-hibernation-in-12-04]
+    Settings Manager -> Power -> use hibernation where possible
